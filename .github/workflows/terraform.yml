@@ -6,13 +6,13 @@ on:
       - stage
     paths:
       - terraform/**
-      - .github/workflows/**
+      - .github/workflows/** # pour que le workflow se déclenche aussi quand on ne modifie que le workflow
   pull_request:
     branches:
       - main
     paths:
       - terraform/**
-      - .github/workflows/**
+      - .github/workflows/** # pour que le workflow se déclenche aussi quand on ne modifie que le workflow
 
 
 env:
