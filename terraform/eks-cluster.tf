@@ -6,7 +6,7 @@ module "eks" {
   version = "19.19.1"
 
   # Nom du cluster EKS à créer. Ce nom est défini dans une variable locale "local.cluster_name".
-  cluster_name    = local.cluster_name
+  cluster_name = local.cluster_name
 
   # Version du cluster Kubernetes (ici, 1.27) à déployer sur AWS.
   cluster_version = "1.27"
@@ -37,9 +37,9 @@ module "eks" {
       instance_types = ["t3.small"]
 
       # Configuration des tailles pour l'auto-scaling du groupe de nœuds
-      min_size     = 1  # Nombre minimum de nœuds
-      max_size     = 3  # Nombre maximum de nœuds
-      desired_size = 2  # Taille désirée du groupe au démarrage
+      min_size     = 1 # Nombre minimum de nœuds
+      max_size     = 3 # Nombre maximum de nœuds
+      desired_size = 2 # Taille désirée du groupe au démarrage
     }
 
     # Deuxième groupe de nœuds (node group 2)
@@ -49,9 +49,9 @@ module "eks" {
       # Type d'instance et taille de scaling pour ce groupe de nœuds (également des t3.small).
       instance_types = ["t3.small"]
 
-      min_size     = 1  # Nombre minimum de nœuds
-      max_size     = 2  # Nombre maximum de nœuds
-      desired_size = 1  # Taille désirée du groupe au démarrage
+      min_size     = 1 # Nombre minimum de nœuds
+      max_size     = 2 # Nombre maximum de nœuds
+      desired_size = 1 # Taille désirée du groupe au démarrage
     }
   }
 }
