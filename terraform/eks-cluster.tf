@@ -36,7 +36,7 @@ module "eks" {
       # Types d'instances EC2 utilisées par ce groupe de nœuds. Ici, des instances de type t3.small.
       instance_types = ["t3.small"]
 
-      # Configuration des tailles pour le scaling du groupe de nœuds
+      # Configuration des tailles pour l'auto-scaling du groupe de nœuds
       min_size     = 1  # Nombre minimum de nœuds
       max_size     = 3  # Nombre maximum de nœuds
       desired_size = 2  # Taille désirée du groupe au démarrage

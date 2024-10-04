@@ -1,4 +1,4 @@
-name: "Vprofile IAC"
+name: "Vprofile_IAC"
 on:
   push:
     branches:
