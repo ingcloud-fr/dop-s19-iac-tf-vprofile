@@ -1,3 +1,5 @@
+# terraform.tf 
+
 terraform {
   required_providers {
     aws = {
@@ -27,13 +29,11 @@ terraform {
   }
 
   backend "s3" {
-    bucket = "gitopsterrastate"
+    bucket = "ingcloud-vprofile-action"
     key    = "terraform.tfstate"
-    region = "us-east-2"
+    region = "eu-west-3"
   }
 
   required_version = "~> 1.6.3"
+  #required_version = "~> 1.9.6"
 }
-##
-##
-##
